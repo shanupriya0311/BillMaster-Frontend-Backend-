@@ -500,5 +500,4 @@ The frontend will be available at: **http://localhost:5173**
 | Lombok | All |
 
 ---
-
 > **Note:** This project contains hardcoded credentials in `application.properties` files (database usernames, passwords, JWT secrets, Razorpay API keys). Before deploying to production or sharing publicly, move all secrets to environment variables or a secrets manager and add `application.properties` to `.gitignore`.
