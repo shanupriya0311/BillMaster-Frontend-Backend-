@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.page {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT */
+.left {
+  width: 50%;
+  background: linear-gradient(135deg, #0b1620, #142a35, #1f3d4c);
+  color: #fff;
+  padding: 48px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  background: #1fbba6;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.brand h3 {
+  font-size: 20px;
+}
+
+.brand p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  margin-top: 80px;
+}
+
+.hero p {
+  max-width: 420px;
+  margin-top: 20px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.stats {
+  display: flex;
+  gap: 70px;
+  margin-top: 60px;
+}
+
+.stats h2 {
+  font-size: 28px;
+}
+
+.stats span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+footer {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* RIGHT */
+.right {
+  width: 50%;
+  background: #f7f9fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box {
+  width: 420px;
+}
+
+.form-box h2 {
+  font-size: 28px;
+}
+
+.sub {
+  color: #6b7280;
+  margin: 8px 0 32px;
+}
+
+.section-label {
+  font-weight: 500;
+}
+
+.role-cards {
+  display: flex;
+  gap: 16px;
+  margin: 14px 0 10px;
+}
+
+.role-card {
+  flex: 1;
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 18px 0;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.role-card .icon {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.role-card span {
+  font-weight: 500;
+}
+
+.role-card.active {
+  background: #eafaf7;
+  border-color: #1fbba6;
+  color: #1fbba6;
+}
+
+.role-hint {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin: 18px 0 6px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 15px;
+}
+
+.demo {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.signin {
+  width: 100%;
+  padding: 16px;
+  background: #1fbba6;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.brand-icon {
+  background: #1fbba6;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-icon i {
+  color: white;
+  font-size: 20px;
+}
+

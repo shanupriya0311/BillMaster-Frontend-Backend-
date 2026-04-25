@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  background: #f9fafb;
+}
+
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: #9ca3af;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.sidebar-logo-box {
+  background: none;
+  color: #10b981;
+  width: auto;
+  height: auto;
+  min-width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  padding: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar-brand-name {
+  color: white;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-top: -4px;
+}
+
+.brand-sub {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.nav-menu {
+  padding: 16px;
+}
+
+.nav-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  color: #9ca3af;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #1f2937;
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 16px;
+  border-top: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.user-profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #374151;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.user-name {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.user-role {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.logout-btn i {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-btn:hover {
+  opacity: 0.8;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.top-header {
+  background: white;
+  padding: 16px 32px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-badge {
+  background: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.notification {
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  background: red;
+  border-radius: 50%;
+}
+
+.content-body {
+  padding: 32px;
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.search-container {
+  flex: 1;
+  position: relative;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.search-container i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+}
+
+.icon-circle {
+  background: #ecfdf5;
+  padding: 12px;
+  border-radius: 8px;
+  color: #10b981;
+}
+
+.price {
+  font-weight: bold;
+}
+
+/* ── Pagination ── */
+.sh-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding-bottom: 12px;
+}
+
+.sh-page-numbers {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sh-page-btn {
+  min-width: 38px;
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.sh-page-btn:hover:not(:disabled) {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.sh-page-btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.sh-page-active {
+  background: #22a699 !important;
+  color: #ffffff !important;
+  border-color: #22a699 !important;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(34, 166, 153, 0.28);
+}
+
+.sh-nav-btn {
+  padding: 0 16px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}

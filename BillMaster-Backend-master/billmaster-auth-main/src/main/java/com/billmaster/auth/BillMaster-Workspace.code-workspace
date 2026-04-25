@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../../../OneDrive/Desktop/BillMaster-Workspace"
+		},
+		{
+			"path": "../../../../../../../../analytics-report-service/analytics-report-service"
+		},
+		{
+			"path": "../../../../../../../../user/user"
+		},
+		{
+			"path": "../../../../../../../../product"
+		},
+		{
+			"path": "../../../../../.."
+		},
+		{
+			"path": "../../../../../../../../eureka-server/eureka-server/target/classes/com/example/eureka_server"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}

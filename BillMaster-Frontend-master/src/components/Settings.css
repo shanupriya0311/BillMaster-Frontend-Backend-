@@ -1,0 +1,163 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.sidebar {
+  width: 260px;
+  background: #0f172a;
+  color: #cbd5f5;
+  padding: 20px 0;
+}
+
+.brand {
+  padding: 0 24px 30px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logo-box {
+  background: #2eb39a;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item {
+  padding: 12px 24px;
+  color: #94a3b8;
+}
+
+.menu-item.active {
+  background: #1e293b;
+  border-left: 4px solid #2eb39a;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px 48px;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  display: flex;
+  gap: 12px;
+}
+
+.icon {
+  background: #e6fffa;
+  color: #2eb39a;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.edit-icon {
+  cursor: pointer;
+  font-size: 18px;
+  color: #64748b;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  color: #475569;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.row>div {
+  flex: 1;
+}
+
+
+.save-btn {
+  background-color: #2eb39a;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #259c86;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-right: 4px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: start;
+}

@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: #eff3f8;
+    font-size: 14px;
+}
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar - styles inherited from SalesHistory.css */
+
+/* Main */
+.content {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    background: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat h3 {
+    margin: 5px 0 0;
+    font-size: 24px;
+}
+
+.stat p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+}
+
+.icon {
+    color: #0d9488;
+}
+
+/* Layouts */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+/* Update these specific sections in your CSS */
+
+.charts {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+    /* Define a consistent height for the whole row */
+    height: 320px;
+}
+
+.card.large,
+.card.small-chart {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Fill the 350px grid row */
+    width: 100%;
+}
+
+/* Ensure the wrapper inside the card grows to fill the space */
+.chart-container {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    /* Important for flex children */
+}
+
+.small-chart {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.small-chart canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+}
+
+.center {
+    margin-top: 12px;
+    text-align: center;
+    color: #94a3b8;
+    padding: 24px;
+}
+
+/* Bottom Section */
+.bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: #94a3b8;
+}
+
+/* ── Low Stock Scrollable Card ── */
+.low-stock-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.low-stock-scroll {
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+.low-stock-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.low-stock-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.low-stock-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+}
+
+.low-stock-scroll::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.low-stock-scroll thead th {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 1;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.low-stock-scroll tbody td {
+    padding: 7px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+
+.low-stock-scroll tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.low-stock-count {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ef4444;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: 2px 10px;
+    border-radius: 999px;
+}

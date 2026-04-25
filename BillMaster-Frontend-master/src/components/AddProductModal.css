@@ -1,0 +1,205 @@
+:root {
+  --primary: #22a699;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --muted: #64748b;
+}
+
+.ap-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.ap-modal {
+  background: white;
+  width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.ap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.ap-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ap-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.ap-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.ap-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-full {
+  margin-bottom: 20px;
+}
+
+/* ── Image Upload ── */
+.ap-image-upload {
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: #f8fafc;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.ap-image-upload:hover {
+  border-color: var(--primary);
+  background: #f0fdf9;
+}
+
+.ap-image-has-preview {
+  border-style: solid;
+  border-color: var(--primary);
+}
+
+.ap-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.ap-upload-icon {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.ap-upload-hint {
+  font-size: 11px;
+  color: #cbd5e1;
+}
+
+.ap-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.ap-image-remove {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: rgba(239, 68, 68, 0.85);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.ap-image-remove:hover {
+  background: #dc2626;
+}
+
+
+.ap-group label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.ap-group input,
+.ap-group select {
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  outline: none;
+}
+
+.ap-group input::placeholder {
+  color: #94a3b8;
+}
+
+.ap-highlight {
+  border: 2px solid var(--primary);
+}
+
+.ap-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.ap-cancel {
+  padding: 10px 22px;
+  border-radius: 10px;
+  background: #67686a;
+  border: 1px solid var(--border);
+  cursor: pointer;
+
+}
+
+.ap-submit {
+  padding: 10px 24px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.ap-submit:hover {
+  opacity: 0.95;
+}
+
+@media (max-width: 600px) {
+  .ap-modal {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .ap-row {
+    flex-direction: column;
+  }
+}

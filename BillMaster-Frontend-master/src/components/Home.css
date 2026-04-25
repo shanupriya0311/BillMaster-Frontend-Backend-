@@ -1,0 +1,650 @@
+/* Color Palette & Tokens */
+:root {
+    --teal-primary: #14b8a6;
+    --teal-hover: #0d9488;
+    --navy-dark: #0f172a;
+    --slate-text: #64748b;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --border-color: #cbd5e1;
+    --input-focus: #2dd4bf;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.landing-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--navy-dark);
+}
+
+/* --- Left Branding Panel --- */
+.left-branding {
+    flex: 1.2;
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+    padding: 80px 100px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Header top, content middle/bottom */
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Background Grid/Wave Effect (Subtle) */
+.left-branding::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: auto;
+    /* Pushes content down */
+}
+
+.logo-box {
+    background: var(--teal-primary);
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(20, 184, 166, 0.3);
+}
+
+.brand-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.brand-tagline {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+.hero-content {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+.headline {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.description {
+    color: #94a3b8;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    max-width: 520px;
+    margin-bottom: 64px;
+}
+
+.stats-bar {
+    display: flex;
+    gap: 64px;
+}
+
+.stat-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.stat-icon {
+    color: var(--teal-primary);
+    margin-top: 2px;
+}
+
+.stat-group h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-group p {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 6px;
+}
+
+.footer-copyright {
+    color: #475569;
+    font-size: 0.85rem;
+}
+
+/* --- Right Action Panel --- */
+.right-action {
+    flex: 1;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Decorative Wave on Right Side */
+.right-action::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at 70% 30%, rgba(20, 184, 166, 0.08), transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid #fff;
+    padding: 60px 50px;
+    border-radius: 32px;
+    width: 100%;
+    max-width: 460px;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    position: relative;
+    z-index: 1;
+}
+
+.card-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: var(--navy-dark);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--navy-dark);
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 16px 16px 48px;
+    /* Space for icon */
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+    background: #fff;
+    color: var(--navy-dark);
+}
+
+.form-input:focus {
+    border-color: var(--teal-primary);
+    box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.1);
+}
+
+.form-input::placeholder {
+    color: #cbd5e1;
+}
+
+.btn-signin {
+    margin-top: 10px;
+    background: #14b8a6;
+    /* Teal solid */
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 50px;
+    /* Fully rounded as per design */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 10px 15px -3px rgba(20, 184, 166, 0.3);
+}
+
+.btn-signin:hover {
+    background: #0d9488;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(20, 184, 166, 0.4);
+}
+
+/* Mobile Scaling */
+@media (max-width: 900px) {
+    .landing-wrapper {
+        flex-direction: column;
+    }
+
+    .left-branding {
+        padding: 40px;
+        min-height: fit-content;
+    }
+
+    .right-action {
+        padding: 40px 20px;
+    }
+
+    .stats-bar {
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+}
+
+/* --- Error Popup Styles --- */
+.error-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.error-popup {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.error-popup h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin-bottom: 12px;
+}
+
+.error-popup p {
+    color: var(--slate-text);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.error-close-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.error-close-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
+/* ====== SIGNUP PAGE STYLES ====== */
+.signup-panel {
+    overflow-y: auto;
+}
+
+.signup-card {
+    max-width: 520px;
+    padding: 40px 50px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.card-subtitle {
+    color: var(--slate-text);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.signup-form {
+    gap: 16px;
+}
+
+.form-section {
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--teal-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.form-select {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 16px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.btn-signup {
+    margin-top: 16px;
+}
+
+.signin-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--slate-text);
+    margin-top: 16px;
+}
+
+.signin-link .link {
+    color: var(--teal-primary);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.signin-link .link:hover {
+    text-decoration: underline;
+}
+
+/* Success Popup */
+.success-popup {
+    border: 2px solid #10b981;
+}
+
+.success-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.success-close-btn {
+    background: var(--teal-primary);
+}
+
+.success-close-btn:hover {
+    background: var(--teal-hover);
+}
+
+/* Scrollbar styling for signup form */
+.signup-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.signup-card::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.signup-card::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.signup-card::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ====== FORGOT PASSWORD LINK ====== */
+.forgot-password-link {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+.forgot-password-link span {
+    color: var(--slate-text);
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    display: inline-block;
+}
+
+.forgot-password-link span::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    right: 50%;
+    height: 1px;
+    background: var(--teal-primary);
+    transition: all 0.3s ease;
+}
+
+.forgot-password-link span:hover {
+    color: var(--teal-primary);
+}
+
+.forgot-password-link span:hover::after {
+    left: 0;
+    right: 0;
+}
+
+/* ====== FORGOT PASSWORD MODAL ====== */
+.forgot-modal {
+    background: white;
+    padding: 44px 48px;
+    border-radius: 28px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    animation: slideUp 0.3s ease-out;
+    position: relative;
+}
+
+.forgot-back-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--slate-text);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: var(--transition);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.forgot-back-btn:hover {
+    background: #f1f5f9;
+    color: var(--navy-dark);
+}
+
+.forgot-icon-wrap {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    animation: bounceIn 0.5s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.forgot-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin-bottom: 12px;
+}
+
+.forgot-desc {
+    color: var(--slate-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.forgot-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn-forgot-submit {
+    width: 100%;
+    background: var(--teal-primary);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 10px 15px -3px rgba(20, 184, 166, 0.3);
+}
+
+.btn-forgot-submit:hover:not(:disabled) {
+    background: var(--teal-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(20, 184, 166, 0.4);
+}
+
+.btn-forgot-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Forgot Password - Success State */
+.forgot-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.forgot-success-icon {
+    font-size: 3.5rem;
+    animation: bounceIn 0.5s ease-out;
+    margin-bottom: 8px;
+}
+
+.forgot-success h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin: 0;
+}
+
+.forgot-success p {
+    color: var(--slate-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.forgot-success p strong {
+    color: var(--navy-dark);
+}
